@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Custom Video Player</title>
+	<link href="css/main.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+	<div id="main">
+		<div id="videoPanel">
+			<video id="myVideo" onclick="playOrPause();" src="files/Tutorial.mp4" height="400" width="625"></video>
+		</div>
+		<div id="controls">
+			<div id="seek-bar">
+				<div id="fill"></div>
+			</div>
+			<table>
+			<tr>
+				<td width="55%">
+					<div id="currentTime">00:00/00:00</div>
+				</td>
+				<td width="30%">
+					<button id="playBtn" onclick="playOrPause();"><i class="fas fa-play"></i></button>
+				</td>
+				<td>
+					<button id="speaker" onclick="muteUnmute();"><i class="fas fa-volume-up"></i></button>
+				</td>
+				<td>
+					<input type="range" min="0" max="1" value="0.4" step="0.2" id="volume" onchange="changeVolume();">
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+</body>
+	<script src="js/main_js.js"></script>
+</html>
